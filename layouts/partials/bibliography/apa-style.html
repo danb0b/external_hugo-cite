@@ -110,9 +110,9 @@
      itemtype="https://schema.org/URL">https://doi.org/{{- .DOI -}}</a>
   {{- else if .URL }}&#32;
   {{- i18n "apa_retrieved_from" | default "Retrieved from" -}}&#32;
-  <a href="{{ .URL }}"
+  <a href="{{ .RelPermalink }}"
      itemprop="identifier"
-     itemtype="https://schema.org/URL">{{ .URL }}</a>
+     itemtype="https://schema.org/URL">{{ .RelPermalink }}</a>
   {{- end -}}
 {{- end -}}
 {{- /* END DOI*/ -}}
